@@ -37,3 +37,7 @@ You will need to change your Clover configuration :
 Open the *config.plist* file with a plist editor like Xcode.
 
 ![Xcode](Images/Xcode1.png)
+
+Uncomment the *layout-id* line (In Root > Devices > Properties > PciRoot(0)/Pci(0x1f,3) > layout-id) that is commented by default.
+
+Then set *layout-id* to ``13``.

@@ -1,4 +1,7 @@
 # Razer Blade 15 Base Model Hackintosh
+Note: I'AM NOT RESPONSIBLE IF YOU MESS UP YOUR COMPUTER USING THIS GUIDE!
+
+## Intro
 
 First of all, you need to know that a lot of things will not work on macOS!
 
@@ -13,9 +16,12 @@ This guide is based on [Razer Blade 15 Advanced 2019 by stonevil](https://github
 * Intel UHD Graphics 630 (with full hardware acceleration)
 * Wifi and Bluetooth (after network card upgrade - Intel Wifi card is not compatible with macOS)
 * Realtek Ethernet card
-* Audio (ALC256 codec)
+* Integrated speakers / mic (ALC256 codec)
 * Battery status
 
 ### What doesn't work?
 
 * Touchpad (You will need an USB mouse)
+* Native Wifi / Bluetooth card (should be replaced)
+
+## BIOS modding

@@ -60,3 +60,18 @@ sudo diskutil mount EFI
 ```
 * Navigate to folder ``/Volumes/EFI/EFI/CLOVER/ACPI/``.
 * Copy folder ``origin`` to ``Desktop`` folder.
+* Download ``MaciASL`` and copy it to ``/Applications/``.
+* Download ``iasl``.
+* Unpack ``iasl.zip`` if required.
+* Copy ``iasl`` from ``~/Downloads/`` folder to ``/usr/bin/`` folder with command in ``Terminal`` application.
+```
+cd ~/Downloads
+sudo cp iasl /usr/bin
+```
+* Navigate to ``~/Desktop/origin/`` folder in ``Terminal`` application with command ``cd ~/Desktop/origin/``.
+* Disassembling ``.aml`` files with command in ``Terminal`` application
+```
+/usr/local/bin/iasl -da -dl DSDT.aml SSDT*.aml
+```
+* Run ``MaciASL`` application and open file ``~/Desktop/origin/DSDT.dsl``.
+* Click ``Patch`` button in toolbar.

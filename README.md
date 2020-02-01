@@ -31,3 +31,9 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 ### Audio
 
 To fix audio, you will need [AppleALC](https://github.com/acidanthera/AppleALC) kext by [acidanthera](https://github.com/acidanthera)
+
+You will need to change your Clover configuration :
+
+Open the *config.plist* file with a plist editor like Xcode.
+
+![Xcode](Images/Xcode1.png)

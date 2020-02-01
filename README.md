@@ -223,6 +223,7 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 
 * Install [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
 * Enable ``Manipulate LED`` for ``Razer Blade (Razer)`` in ``Devices`` section
+![Karabiner](Images/Karabiner.png)
 
 ### iMessage / FaceTime
 

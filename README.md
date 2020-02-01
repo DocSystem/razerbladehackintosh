@@ -207,4 +207,9 @@ Then copy ``AirPortBrcmFixup``, ``BrcmFirmwareData``, ``BrcmNonPatchRAM2`` and `
 
 Download [Lilu](https://github.com/acidanthera/Lilu/releases) and [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases) kexts.
 
-Copy them in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/`.
+Copy them in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
+
+### Ethernet
+
+Download [RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) kext.
+Place it in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.

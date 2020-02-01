@@ -195,10 +195,16 @@ into device label EC0 code_regex (ECCM,)\s+(256) replace_matched begin ECCX,%2,/
 into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC0.RECB(0x60,256), end;
 ```
 * Copy the [ACPIBatteryManager](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/) kext to ``/Volumes/EFI/EFI/CLOVER/kexts/Other``.
-* You are done, now reboot and it will work!
+* That's done, now reboot and it will work!
 
 ### Wifi / Bluetooth patch (After upgrading network card)
 
 Just download [AirPortBrcmFixup](https://github.com/acidanthera/airportbrcmfixup/releases) and [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases)
 
 Then copy ``AirPortBrcmFixup``, ``BrcmFirmwareData``, ``BrcmNonPatchRAM2`` and ``BrcmPatchRAM2`` kexts to ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
+
+### Integrated graphics
+
+Download [Lilu](https://github.com/acidanthera/Lilu/releases) and [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases) kexts.
+
+Copy them in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/`.

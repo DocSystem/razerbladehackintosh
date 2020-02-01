@@ -200,7 +200,7 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 * Copy the [ACPIBatteryManager](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/) kext to ``/Volumes/EFI/EFI/CLOVER/kexts/Other``.
 * That's done, now reboot and it will work!
 
-### Wifi / Bluetooth patch (After upgrading network card)
+### Wifi / Bluetooth (After upgrading network card)
 
 * Just download [AirPortBrcmFixup](https://github.com/acidanthera/airportbrcmfixup/releases) and [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases)
 * Then copy ``AirPortBrcmFixup``, ``BrcmFirmwareData``, ``BrcmNonPatchRAM2`` and ``BrcmPatchRAM2`` kexts to ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
@@ -217,3 +217,7 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 * Download [RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) kext.
 * Place it in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
 * Now reboot and Ethernet will work
+
+### iMessage / FaceTime
+
+To enable iMessage and FaceTime you can follow this [guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/)

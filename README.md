@@ -41,3 +41,19 @@ Open the *config.plist* file with a plist editor like Xcode.
 Uncomment the *layout-id* line (In Root > Devices > Properties > PciRoot(0)/Pci(0x1f,3) > layout-id) that is commented by default.
 
 Then set *layout-id* to ``13``.
+
+### Battery status
+
+You will need to patch your DSDT to get battery status working.
+
+#### Export ACPI
+
+* Reboot computer
+* In ``Clover Boot Menu`` press ``F2``
+* Select normal macOS boot.
+
+#### DSDT patching
+
+* Mount your ``EFI`` partition using *Clover Configurator* or by typing ``sudo diskutil mount EFI`` in a Terminal
+* Navigate to folder ``/Volumes/EFI/EFI/CLOVER/ACPI/``.
+* Copy folder ``origin`` to ``Desktop`` folder.

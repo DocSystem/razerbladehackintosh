@@ -54,10 +54,9 @@ You will need to patch your DSDT to get battery status working.
 
 #### DSDT patching
 
-* Mount your ``EFI`` partition using *Clover Configurator* or by typing
+* Mount your ``EFI`` partition using *Clover Configurator* or by typing in a Terminal
 ```
 sudo diskutil mount EFI
 ```
-in a Terminal
 * Navigate to folder ``/Volumes/EFI/EFI/CLOVER/ACPI/``.
 * Copy folder ``origin`` to ``Desktop`` folder.

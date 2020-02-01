@@ -20,6 +20,7 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 * Realtek Ethernet card
 * Integrated speakers / mic (ALC256 codec)
 * Battery status
+* Integrated 720p Webcam
 
 ### What doesn't work?
 
@@ -217,6 +218,11 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 * Download [RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) kext.
 * Place it in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
 * Now reboot and Ethernet will work
+
+### Caps Lock light
+
+* Install [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
+* Enable ``Manipulate LED`` for ``Razer Blade (Razer)`` in ``Devices`` section
 
 ### iMessage / FaceTime
 

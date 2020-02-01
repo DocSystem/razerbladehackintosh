@@ -25,3 +25,9 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 
 * Touchpad (You will need an USB mouse)
 * Native Wifi / Bluetooth card (should be replaced)
+
+## Fixes
+
+### Audio
+
+To fix audio, you will need [AppleALC](https://github.com/acidanthera/AppleALC) kext by [acidanthera](https://github.com/acidanthera)

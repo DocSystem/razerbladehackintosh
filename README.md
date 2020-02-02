@@ -1,5 +1,8 @@
 # Razer Blade 15 Base Model Hackintosh
+
 Note: I'AM NOT RESPONSIBLE IF YOU MESS UP YOUR COMPUTER USING THIS GUIDE!
+
+![About This Mac](Images/AboutThisMac.png)
 
 ## Intro
 

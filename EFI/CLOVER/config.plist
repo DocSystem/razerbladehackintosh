@@ -181,14 +181,14 @@
 	<dict>
 		<key>Arguments</key>
 		<string>dart=0 nv_disable=1 -disablegfxfirmware -cdfon -igfxnohdmi -v</string>
-		<key>#DefaultVolume</key>
+		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>10</integer>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -429,7 +429,7 @@
 		<key>#ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>embedded</string>
+		<string>Mojave</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>

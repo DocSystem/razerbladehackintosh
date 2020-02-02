@@ -81,6 +81,7 @@ sudo cp iasl /usr/bin
 ```
 * Run ``MaciASL`` application and open file ``~/Desktop/origin/DSDT.dsl``.
 * Click ``Patch`` button in toolbar.
+![MaciASL patch window](Images/MaciASL.png)
 * Copy this patch in the ``Patch`` window:
 ```
 into method label B1B2 remove_entry;

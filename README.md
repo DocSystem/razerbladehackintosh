@@ -225,6 +225,13 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 * Place it in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
 * Now reboot and Ethernet will work
 
+### Trackpad
+
+* Download [VoodooI2C](about:blank) kext.
+* Place ``VoodooI2C`` and ``VoodooI2CHID`` in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
+* I am working on the ACPI patching guide for trackpad
+* Now reboot and the trackpad will fully work
+
 ### Caps Lock light
 
 * Install [Karabiner-Elements](https://pqrs.org/osx/karabiner/)

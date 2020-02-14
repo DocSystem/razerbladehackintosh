@@ -229,7 +229,7 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 
 * Download [VoodooI2C](about:blank) kext.
 * Place ``VoodooI2C`` and ``VoodooI2CHID`` in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
-* I am working on the ACPI patching guide for trackpad
+* I am working on the ACPI patching guide for trackpad (for the moment use my [DSDT.aml](EFI/CLOVER/ACPI/patched/DSDT.aml))
 * Now reboot and the trackpad will fully work
 
 ### Caps Lock light

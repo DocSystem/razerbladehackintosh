@@ -24,13 +24,13 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 * Integrated speakers / mic (ALC256 codec)
 * Battery status
 * Integrated 720p Webcam
+* Trackpad (with all gestures)
 
 ### What doesn't work?
 
-* Touchpad (You will need an USB mouse)
 * Native Wifi / Bluetooth card (should be replaced)
 * NVIDIA GPU (No drivers for RTX 2060 / GTX 1660)
-* HDMI / mDP (They are connected to the NVIDIA GPU)
+* HDMI / mDP / USB-C to HDMI (They are connected to the NVIDIA GPU)
 
 ## Fixes
 

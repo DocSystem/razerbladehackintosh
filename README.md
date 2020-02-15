@@ -25,6 +25,7 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 * Battery status
 * Integrated 720p Webcam
 * Trackpad (with all gestures)
+* Handoff (After network card upgrade)
 * Sleep (but you will need to wait ~40s before closing screen)
 * Shutdown / Reboot without kernel panic
 

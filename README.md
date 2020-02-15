@@ -231,15 +231,43 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 
 * Download [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) kext.
 * Place ``VoodooI2C`` and ``VoodooI2CHID`` in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
-* I am working on the ACPI patching guide for trackpad (for the moment use my [DSDT.aml](EFI/CLOVER/ACPI/patched/DSDT.aml))
-
-#### Working on guide (don't use)
-
 * Open your DSDT file in MaciASL
 * Click ``Patch`` button in toolbar.
 ![MaciASL patch window](Images/MaciASL2.png)
 * Select the ``[Windows] Windows 10 Patch`` in ``_VoodooI2C-Patches``
 * Click ``Apply``
+* Then copy this patch in the ``Patch`` window:
+```
+into method label _STA parent_label GPI0 replace_content begin
+
+Return (0x0F)
+
+end;
+```
+* Open find the below SBFG Name
+```
+Name (SBFG, ResourceTemplate ()
+   {
+       GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,
+           "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
+           )
+           {   // Pin list
+               0x0000
+           }
+   })
+```
+* And replace by this:
+```
+Name (SBFG, ResourceTemplate ()
+   {
+       GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,
+           "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
+           )
+           {   // Pin list
+               0x00A2
+           }
+   })
+```
 
 * Now reboot and the trackpad will fully work
 

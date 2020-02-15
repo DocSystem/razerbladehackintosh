@@ -268,7 +268,9 @@ Name (SBFG, ResourceTemplate ()
            }
    })
 ```
-
+* Then close the ``Patch`` window
+* Save the file as *ACPI Machine Language Binary*
+* Copy your new ``DSDT.aml`` to ``/Volumes/EFI/EFI/CLOVER/ACPI/patched/``
 * Now reboot and the trackpad will fully work
 
 ### Caps Lock light

@@ -232,6 +232,15 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 * Download [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) kext.
 * Place ``VoodooI2C`` and ``VoodooI2CHID`` in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
 * I am working on the ACPI patching guide for trackpad (for the moment use my [DSDT.aml](EFI/CLOVER/ACPI/patched/DSDT.aml))
+
+#### Working on guide (don't use)
+
+* Open your DSDT file in MaciASL
+* Click ``Patch`` button in toolbar.
+![MaciASL patch window](Images/MaciASL2.png)
+* Select the ``[Windows] Windows 10 Patch`` in ``_VoodooI2C-Patches``
+* Click ``Apply``
+
 * Now reboot and the trackpad will fully work
 
 ### Caps Lock light

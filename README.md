@@ -25,13 +25,14 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 * Battery status
 * Integrated 720p Webcam
 * Trackpad (with all gestures)
+* Sleep (but you will need to wait ~40s before closing screen)
+* Shutdown / Reboot without kernel panic
 
 ### What doesn't work?
 
 * Native Wifi / Bluetooth card (should be replaced)
 * NVIDIA GPU (No drivers for RTX 2060 / GTX 1660)
 * HDMI / mDP / USB-C to HDMI (They are connected to the NVIDIA GPU)
-* Sleep (currently working on a patch)
 
 ## Fixes
 

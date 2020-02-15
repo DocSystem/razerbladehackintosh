@@ -244,7 +244,7 @@ Return (0x0F)
 
 end;
 ```
-* Open find the below SBFG Name
+* Then find this code in ``Device (TPD0)`` in ``Scope (_SB.PCI0.I2C1)``:
 ```
 Name (SBFG, ResourceTemplate ()
    {

@@ -202,7 +202,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -disablegfxfirmware -cdfon -igfxnohdmi nv_disable=1 slide=0</string>
+		<string>dart=0 -disablegfxfirmware -cdfon -igfxnohdmi nv_disable=1 slide=0 -v</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>

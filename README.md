@@ -14,6 +14,8 @@ This guide is based on [Razer Blade 15 Advanced 2019 by stonevil](https://github
 
 I will no explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
 
+The basic config that I used is [config_UHD630.plist](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/config_UHD630.plist) by [RehabMan](https://github.com/RehabMan)
+
 ## Hardware
 
 ### What works?

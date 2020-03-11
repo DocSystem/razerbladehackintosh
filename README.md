@@ -73,11 +73,11 @@ sudo diskutil mount EFI
 * Copy folder ``origin`` to ``Desktop`` folder.
 * Download ``MaciASL`` and copy it to ``/Applications/``.
 * Download ``iasl``.
-* Unpack ``iasl.zip`` if required.
+* Unzip ``iasl.zip`` if required.
 * Copy ``iasl`` from ``~/Downloads/`` folder to ``/usr/bin/`` folder with command in ``Terminal`` application.
 ```
-cd ~/Downloads
-sudo cp iasl /usr/bin
+sudo cp ~/Downloads/iasl /usr/bin/
+rm ~/Downloads/iasl
 ```
 * Navigate to ``~/Desktop/origin/`` folder in ``Terminal`` application with command ``cd ~/Desktop/origin/``.
 * Disassembling ``.aml`` files with command in ``Terminal`` application

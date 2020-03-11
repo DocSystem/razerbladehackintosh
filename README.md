@@ -82,7 +82,7 @@ sudo cp iasl /usr/bin
 * Navigate to ``~/Desktop/origin/`` folder in ``Terminal`` application with command ``cd ~/Desktop/origin/``.
 * Disassembling ``.aml`` files with command in ``Terminal`` application
 ```
-/usr/local/bin/iasl -da -dl DSDT.aml SSDT*.aml
+iasl -da -dl DSDT.aml SSDT*.aml
 ```
 * Run ``MaciASL`` application and open file ``~/Desktop/origin/DSDT.dsl``.
 * Click ``Patch`` button in toolbar.

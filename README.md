@@ -26,14 +26,14 @@ I will no explain you how to install macOS because there are a lot of tutorials 
 * Integrated 720p Webcam
 * Trackpad (with all gestures)
 * Handoff (After network card upgrade)
-* Sleep (but you will need to wait ~40s before closing screen)
+* Sleep (but you will need to for full sleep before closing screen or it will be black after restart)
 * Shutdown / Reboot without kernel panic
 
 ### What doesn't work?
 
 * Native Wifi / Bluetooth card (should be replaced)
 * NVIDIA GPU (No drivers for RTX 2060 / GTX 1660)
-* HDMI / mDP / USB-C to HDMI (They are connected to the NVIDIA GPU)
+* HDMI / mDP / USB-C to HDMI (They are connected to the NVIDIA GPU - You can use an external USB display using [DisplayLink](https://www.displaylink.com/) technology or things like this)
 
 ## Fixes
 
@@ -49,7 +49,7 @@ Open the *config.plist* file with a plist editor like Xcode.
 
 Uncomment the *layout-id* line (In Root > Devices > Properties > PciRoot(0)/Pci(0x1f,3) > layout-id) that is commented by default.
 
-Then set *layout-id* to ``13``.
+Then set *layout-id* to ``23``.
 
 ### Battery status
 
@@ -210,11 +210,16 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 * Copy the [ACPIBatteryManager](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/) kext to ``/Volumes/EFI/EFI/CLOVER/kexts/Other``.
 * That's done, now reboot and it will work!
 
+#### New Method
+
+Sometimes, the ``ACPIBatteryManager`` can cause bugs! I suggest you to replace it by [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) and its ``SMCBatteryManager`` extension.
+
 ### Wifi / Bluetooth (After upgrading network card)
 
 * Just download [AirPortBrcmFixup](https://github.com/acidanthera/airportbrcmfixup/releases) and [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases)
 * Then copy ``AirPortBrcmFixup``, ``BrcmFirmwareData``, ``BrcmNonPatchRAM2`` and ``BrcmPatchRAM2`` kexts to ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
 * Now reboot and if you have a compatible network card Wifi and Bluetooth will work!
+* **DON'T DO THIS IF YOU DON'T HAVE UPGRADED YOUR WIFI/BLUETOOTH CARD!!!**
 
 ### Integrated graphics
 

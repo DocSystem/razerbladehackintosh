@@ -14,6 +14,8 @@ This guide is based on [Razer Blade 15 Advanced 2019 by stonevil](https://github
 
 I will no explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
 
+The basic config that I used is [config_UHD630.plist](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/config_UHD630.plist) by [RehabMan](https://github.com/RehabMan)
+
 ## Hardware
 
 ### What works?
@@ -71,16 +73,16 @@ sudo diskutil mount EFI
 * Copy folder ``origin`` to ``Desktop`` folder.
 * Download ``MaciASL`` and copy it to ``/Applications/``.
 * Download ``iasl``.
-* Unpack ``iasl.zip`` if required.
+* Unzip ``iasl.zip`` if required.
 * Copy ``iasl`` from ``~/Downloads/`` folder to ``/usr/bin/`` folder with command in ``Terminal`` application.
 ```
-cd ~/Downloads
-sudo cp iasl /usr/bin
+sudo cp ~/Downloads/iasl /usr/bin/
+rm ~/Downloads/iasl
 ```
 * Navigate to ``~/Desktop/origin/`` folder in ``Terminal`` application with command ``cd ~/Desktop/origin/``.
 * Disassembling ``.aml`` files with command in ``Terminal`` application
 ```
-/usr/local/bin/iasl -da -dl DSDT.aml SSDT*.aml
+iasl -da -dl DSDT.aml SSDT*.aml
 ```
 * Run ``MaciASL`` application and open file ``~/Desktop/origin/DSDT.dsl``.
 * Click ``Patch`` button in toolbar.

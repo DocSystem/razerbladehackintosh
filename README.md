@@ -287,6 +287,14 @@ Name (SBFG, ResourceTemplate ()
 * Enable ``Manipulate LED`` for ``Razer Blade (Razer)`` in ``Devices`` section
 ![Karabiner](Images/Karabiner.png)
 
+### Keyboard backlight control
+
+* Just download my fork of [osx-razer-blade](https://github.com/DocSystem/osx-razer-blade) if you want to compile it with Xcode or just use the command line tool: [osx-razer-led](https://github.com/DocSystem/osx-razer-led)
+* For example, if you want the keyboard to be white and stay static, just type:
+```
+osx-razer-led static white
+```
+
 ### iMessage / FaceTime
 
 To enable iMessage and FaceTime you can follow this [guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/)

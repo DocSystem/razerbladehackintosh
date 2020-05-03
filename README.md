@@ -279,6 +279,10 @@ Name (SBFG, ResourceTemplate ()
 * Then close the ``Patch`` window
 * Save the file as *ACPI Machine Language Binary*
 * Copy your new ``DSDT.aml`` to ``/Volumes/EFI/EFI/CLOVER/ACPI/patched/``
+* Now open your CLOVER ``config.plist`` file with a plist editor like ``Xcode``
+* Go to ``Kernel and Kexts patches`` > ``ForceKextsToLoad``
+* Add a string with value ``\System\Library\Extensions\IOGraphicsFamily.kext``
+![Xcode2](Images/Xcode2.png)
 * Now reboot and the trackpad will fully work
 
 ### Caps Lock light

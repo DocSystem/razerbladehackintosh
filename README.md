@@ -293,7 +293,7 @@ Name (SBFG, ResourceTemplate ()
 
 ### Keyboard backlight control
 
-There are two ways to control your Razer Keyboard. You can use the [command line tool](#commandlinetool) or the [app](#gui)
+There are two ways to control your Razer Keyboard. You can use the [command line tool](#command-line-tool) or the [app](#gui)
 
 #### GUI
 

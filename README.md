@@ -298,7 +298,7 @@ There are two ways to control your Razer Keyboard. You can use the [command line
 #### GUI
 
 * You can use the [Razer macOS](https://github.com/1kc/razer-macos) app by 1kc that allow you to change your Razer Keyboard color from the taskbar
-* Just download [it](Tools/Razer macOS.dmg)
+* Just download [it](Tools/Razer-macOS.dmg)
 
 #### Command Line Tool
 * Just download my fork of [osx-razer-blade](https://github.com/DocSystem/osx-razer-blade) if you want to compile it with Xcode or just use the command line tool: [osx-razer-led](https://github.com/DocSystem/osx-razer-led)

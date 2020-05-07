@@ -215,6 +215,16 @@ into method label _BIF code_regex \(\^\^EC0.ECCM, replaceall_matched begin (^^EC
 #### New Method
 
 Sometimes, the ``ACPIBatteryManager`` can cause bugs! I suggest you to replace it by [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) and its ``SMCBatteryManager`` extension.
+* Remove ``ACPIBatteryManager.kext`` if you have it.
+* Put ``VirtualSMC`` and ``SMCBatteryManager`` kexts in your kexts folder.
+* Open your DSDT file with MaciASL
+* Click ``Patch`` button in toolbar.
+* Now navigate and select Razer Blade (2014) in the patches list.
+* Click on ``Apply``
+* Close the ``Patch`` window.
+* Save the file as *ACPI Machine Language Binary*
+* Copy your new ``DSDT.aml`` to ``/Volumes/EFI/EFI/CLOVER/ACPI/patched/``
+* That's done, now reboot and it will work!
 
 ### Wifi / Bluetooth (After upgrading network card)
 

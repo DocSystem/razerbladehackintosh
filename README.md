@@ -84,6 +84,7 @@ rm ~/Downloads/iasl
 ```
 iasl -da -dl DSDT.aml SSDT*.aml
 ```
+#### Old method (please use the [new method](#new-method))
 * Run ``MaciASL`` application and open file ``~/Desktop/origin/DSDT.dsl``.
 * Click ``Patch`` button in toolbar.
 ![MaciASL patch window](Images/MaciASL.png)

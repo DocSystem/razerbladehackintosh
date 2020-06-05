@@ -13,7 +13,7 @@ This repository contains all the necessary files that I used to Hackintosh my Ra
 This guide is based on [Razer Blade 15 Advanced 2019 by stonevil](https://github.com/stonevil/Razer_Blade_Advanced_early_2019_Hackintosh) and [Razer Blade 15 2018 by vettz500](https://www.tonymacx86.com/threads/guide-razer-blade-15-2018-detailed-install-guide-high-sierra-10-13-6-17g2208-17g5019.264017/) tutorials.
 
 #### NEW VERSION
-The current EFI folder is not compatible with Catalina! Also, it uses CLOVER. You can download [here]() a new EFI folder for macOS 10.15+ (cause it uses MacBookPro16,1 SMBIOS) that uses OpenCore, which will have better support for future macOS updates!
+**The current CLOVER EFI folder is not compatible with Catalina! Also, it uses CLOVER. You can download the [EFI_OC](EFI_OC) folder which is a new EFI folder for macOS 10.15+ (cause it uses MacBookPro16,1 SMBIOS) that uses OpenCore, which will have better support for future macOS updates!**
 
 I will no explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
 

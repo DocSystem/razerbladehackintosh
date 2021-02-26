@@ -1,6 +1,54 @@
 # Razer Blade 15 Base Model Hackintosh
 
-![About This Mac](Images/AboutThisMac.png)
+![About This Mac](Images_OLD/AboutThisMac.png)
+
+## Intro
+
+First of all, you need to know that a some things will not work on macOS!
+
+This repository contains all the necessary files that I used to Hackintosh my Razer Blade
+
+This EFI is based on [Razer Blade 15 Base Model 2019 Hackintosh by The Mysticle](https://www.youtube.com/watch?v=oxQU3IrGqCM) tutorial.
+
+#### NEW VERSION
+**The current CLOVER EFI folder is not compatible with Catalina and Big Sur! Also, it uses CLOVER. You can download the [EFI_OC](EFI_OC) folder which is a new EFI folder for macOS 10.15+ (cause it uses MacBookPro16,1 SMBIOS) that uses OpenCore, which will have better support for future macOS updates!**
+
+**Also, there are no unnecessary patches on OpenCore because I only patched required SSDT, there is no DSDT patch like on CLOVER!**
+
+I will not explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
+
+## Hardware
+
+### What works?
+
+* Intel UHD Graphics 630 (with full hardware acceleration using [WhateverGreen](https://github.com/acidanthera/WhateverGreen))
+* Wifi and Bluetooth (using [itlwm](https://github.com/OpenIntelWireless/itlwm) and [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware))
+* Realtek Ethernet card (using [RealtekRTL8111](https://github.com/RehabMan/OS-X-Realtek-Network))
+* Integrated speakers + mic and external speakers/headphones + mic on jack port (using [AppleALC](https://github.com/acidanthera/AppleALC) with layout-id ``21`` for ALC256 codec)
+* Battery status (using [SMCBatteryManager](https://github.com/acidanthera/VirtualSMC))
+* Integrated 720p Webcam
+* Trackpad (with all gestures using [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C))
+* AirDrop and Apple Watch Unlock (After network card upgrade)
+
+### What doesn't work?
+
+* AirDrop and Apple Watch Unlock with native Intel card (should be replaced with a Broadcom one)
+* NVIDIA GPU (No drivers for RTX 2060 / GTX 1660)
+* HDMI / mDP / USB-C to HDMI (They are connected to the NVIDIA GPU - You can use an external USB display using [DisplayLink](https://www.displaylink.com/) technology or things like this)
+
+## Fixes
+
+### WiFi + Bluetooth
+
+In my OpenCore EFI folder, I use AirportItlwm and IntelBluetoothFirmware for macOS Big Sur, if you use another macOS version, check [itlwm](https://github.com/OpenIntelWireless/itlwm) and [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) pages to see what you have to do. And, if you changed you WiFi / BT card, follow another tutorial like [AirPortBrcmFixup](https://github.com/acidanthera/AirPortBrcmFixup) one to get it working if needed.
+
+### Audio
+
+I use [AppleALC](https://github.com/acidanthera/AppleALC) with ``layout-id`` **21** to fix audio. If you want, you can see all the ``layout-ids`` I tried in [this file](layout-ids.md).
+
+# Old guide
+
+![About This Mac](Images_OLD/AboutThisMac.png)
 
 ## Intro
 
@@ -13,7 +61,7 @@ This guide is based on [Razer Blade 15 Advanced 2019 by stonevil](https://github
 #### NEW VERSION
 **The current CLOVER EFI folder is not compatible with Catalina and Big Sur! Also, it uses CLOVER. You can download the [EFI_OC](EFI_OC) folder which is a new EFI folder for macOS 10.15+ (cause it uses MacBookPro16,1 SMBIOS) that uses OpenCore, which will have better support for future macOS updates!**
 
-I will no explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
+I will not explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
 
 The basic config that I used is [config_UHD630.plist](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/config_UHD630.plist) by [RehabMan](https://github.com/RehabMan)
 
@@ -48,7 +96,7 @@ You will need to change your Clover configuration :
 
 Open the *config.plist* file with a plist editor like Xcode.
 
-![Xcode](Images/Xcode1.png)
+![Xcode](Images_OLD/Xcode1.png)
 
 Uncomment the *layout-id* line (In Root > Devices > Properties > PciRoot(0)/Pci(0x1f,3) > layout-id) that is commented by default.
 
@@ -88,7 +136,7 @@ iasl -da -dl DSDT.aml SSDT*.aml
 #### Old method (please use the [new method](#new-method))
 * Run ``MaciASL`` application and open file ``~/Desktop/origin/DSDT.dsl``.
 * Click ``Patch`` button in toolbar.
-![MaciASL patch window](Images/MaciASL.png)
+![MaciASL patch window](Images_OLD/MaciASL.png)
 * Copy this patch in the ``Patch`` window:
 ```
 into method label B1B2 remove_entry;
@@ -253,7 +301,7 @@ Sometimes, the ``ACPIBatteryManager`` can cause bugs! I suggest you to replace i
 * Place ``VoodooI2C`` and ``VoodooI2CHID`` in ``/Volumes/EFI/EFI/CLOVER/kexts/Other/``.
 * Open your DSDT file in MaciASL
 * Click ``Patch`` button in toolbar.
-![MaciASL patch window](Images/MaciASL2.png)
+![MaciASL patch window](Images_OLD/MaciASL2.png)
 * Select the ``[Windows] Windows 10 Patch`` in ``_VoodooI2C-Patches``
 * Click ``Apply``
 * Then copy this patch in the ``Patch`` window:
@@ -294,14 +342,14 @@ Name (SBFG, ResourceTemplate ()
 * Now open your CLOVER ``config.plist`` file with a plist editor like ``Xcode``
 * Go to ``Kernel and Kexts patches`` > ``ForceKextsToLoad``
 * Add a string with value ``\System\Library\Extensions\IOGraphicsFamily.kext``
-![Xcode2](Images/Xcode2.png)
+![Xcode2](Images_OLD/Xcode2.png)
 * Now reboot and the trackpad will fully work
 
 ### Caps Lock light
 
 * Install [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
 * Enable ``Manipulate LED`` for ``Razer Blade (Razer)`` in ``Devices`` section
-![Karabiner](Images/Karabiner.png)
+![Karabiner](Images_OLD/Karabiner.png)
 
 ### Keyboard backlight control
 

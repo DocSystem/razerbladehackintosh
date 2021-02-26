@@ -11,7 +11,7 @@ This repository contains all the necessary files that I used to Hackintosh my Ra
 This guide is based on [Razer Blade 15 Advanced 2019 by stonevil](https://github.com/stonevil/Razer_Blade_Advanced_early_2019_Hackintosh) and [Razer Blade 15 2018 by vettz500](https://www.tonymacx86.com/threads/guide-razer-blade-15-2018-detailed-install-guide-high-sierra-10-13-6-17g2208-17g5019.264017/) tutorials.
 
 #### NEW VERSION
-**The current CLOVER EFI folder is not compatible with Catalina! Also, it uses CLOVER. You can download the [EFI_OC](EFI_OC) folder which is a new EFI folder for macOS 10.15+ (cause it uses MacBookPro16,1 SMBIOS) that uses OpenCore, which will have better support for future macOS updates!**
+**The current CLOVER EFI folder is not compatible with Catalina and Big Sur! Also, it uses CLOVER. You can download the [EFI_OC](EFI_OC) folder which is a new EFI folder for macOS 10.15+ (cause it uses MacBookPro16,1 SMBIOS) that uses OpenCore, which will have better support for future macOS updates!**
 
 I will no explain you how to install macOS because there are a lot of tutorials to do it! I will only explain how to have maximum hardware working after macOS installation
 
@@ -21,22 +21,22 @@ The basic config that I used is [config_UHD630.plist](https://github.com/RehabMa
 
 ### What works?
 
-* Intel UHD Graphics 630 (with full hardware acceleration)
-* Wifi and Bluetooth (after network card upgrade - Intel Wifi card is not compatible with macOS)
-* Realtek Ethernet card
-* Integrated speakers / mic (ALC256 codec)
-* Battery status
+* Intel UHD Graphics 630 (with full hardware acceleration using [WhateverGreen](https://github.com/acidanthera/WhateverGreen))
+* Wifi and Bluetooth (using [itlwm](https://github.com/OpenIntelWireless/itlwm) and [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware))
+* Realtek Ethernet card (using [RealtekRTL8111](https://github.com/RehabMan/OS-X-Realtek-Network))
+* Integrated speakers + mic and external speakers/headphones + mic on jack port (using [AppleALC](https://github.com/acidanthera/AppleALC) with layout-id ``21`` for ALC256 codec)
+* Battery status (using [SMCBatteryManager](https://github.com/acidanthera/VirtualSMC))
 * Integrated 720p Webcam
-* Trackpad (with all gestures)
-* Handoff (After network card upgrade)
-* Sleep (but you will need to for full sleep before closing screen or it will be black after restart)
-* Shutdown / Reboot without kernel panic
+* Trackpad (with all gestures using [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C))
+* AirDrop and Apple Watch Unlock (After network card upgrade)
 
 ### What doesn't work?
 
-* Native Wifi / Bluetooth card (should be replaced)
+* AirDrop and Apple Watch Unlock with native Intel card (should be replaced with a Broadcom one)
 * NVIDIA GPU (No drivers for RTX 2060 / GTX 1660)
 * HDMI / mDP / USB-C to HDMI (They are connected to the NVIDIA GPU - You can use an external USB display using [DisplayLink](https://www.displaylink.com/) technology or things like this)
+
+# Old guide
 
 ## Fixes
 
@@ -52,7 +52,7 @@ Open the *config.plist* file with a plist editor like Xcode.
 
 Uncomment the *layout-id* line (In Root > Devices > Properties > PciRoot(0)/Pci(0x1f,3) > layout-id) that is commented by default.
 
-Then set *layout-id* to ``13``.
+Then set *layout-id* to ``21``.
 
 ### Battery status
 

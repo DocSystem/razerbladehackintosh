@@ -1,6 +1,6 @@
 # Razer Blade 15 Base Model Hackintosh
 
-![About This Mac](Images_OLD/AboutThisMac.png)
+![About This Mac](Images/AboutThisMac.png)
 
 ## Intro
 
